@@ -64,6 +64,7 @@ public class Scrollbar extends Widget {
 	private int value;
 	private int requiredValue;
 	private int visibilityLevel;
+	private final boolean showScrollbar;
 
 	/**
 	 * Creates a new scrollbar with the specified size.
@@ -72,7 +73,12 @@ public class Scrollbar extends Widget {
 	 *            the maximum bound.
 	 */
 	public Scrollbar(int maximum) {
+		this(maximum, true);
+	}
+
+	public Scrollbar(int maximum, boolean showScrollbar) {
 		this.maximum = Math.max(maximum, 0);
+		this.showScrollbar = showScrollbar;
 		internalSetVisibilityLevel(GraphicsContext.TRANSPARENT);
 	}
 
@@ -164,8 +170,12 @@ public class Scrollbar extends Widget {
 
 	private int getSize(Style style) {
 		try {
-			FixedDimension dimension = (FixedDimension) style.getDimension();
-			return dimension.getWidth();
+			if (this.showScrollbar) {
+				FixedDimension dimension = (FixedDimension) style.getDimension();
+				return dimension.getWidth();
+			} else {
+				return 0;
+			}
 		} catch (ClassCastException e) {
 			return DEFAULT_WIDTH;
 		}

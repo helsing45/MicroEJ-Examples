@@ -1,6 +1,6 @@
 <ivy-module version="2.0" xmlns:ea="http://www.easyant.org" xmlns:ej="https://developer.microej.com" ej:version="2.0.0">
-	<info organisation="logient.widgets" module="scrolllist" status="integration" revision="1.0.0">
-		<ea:build organisation="com.is2t.easyant.buildtypes" module="build-microej-javaapi" microej.lib.name="scrolllist-1.0-api"  rip.printableName="scrolllist API" revision="5.0.+">
+	<info organisation="logient.widgets" module="navigation-drawer" status="integration" revision="0.1.0">
+		<ea:build organisation="com.is2t.easyant.buildtypes" module="build-microej-javaapi" microej.lib.name="navigation-drawer-1.0-api"  rip.printableName="navigation-drawer API" revision="5.0.+">
 		</ea:build>
 	</info>
 	<configurations defaultconfmapping="default->default;provided->provided">
@@ -18,8 +18,13 @@
 	</publications>
 	
 	<dependencies>
-		<dependency org="ej.api" name="edc" rev="1.3.3" />		
-		<dependency org="ej.library.ui" name="mwt" rev="3.3.1"/>		
-		<dependency org="ej.library.ui" name="widget" rev="4.2.0"/>
+		<!--
+			Put MicroEJ API dependencies and other dependencies here.
+		-->
+		<dependency org="ej.api" name="edc" rev="1.3.3" />
+		
+		<dependency org="logient.libraries" name="material" rev="1.0.0"/>
+		<dependency org="logient.widgets" name="scrolllist" rev="1.0.0"/>
+		
 	</dependencies>
 </ivy-module>

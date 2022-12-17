@@ -47,13 +47,23 @@ public class Scroll extends Container {
 		this(horizontal, -1);
 	}
 
-	public Scroll(boolean horizontal, int classSelector) {
+	public Scroll(boolean horizontal, int scrollBarClassSelector) {
 		super(true);
 		this.horizontal = horizontal;
 		this.scrollbar = new Scrollbar(0);
-		if (classSelector > -1) {
-			this.scrollbar.addClassSelector(classSelector);
+		if (scrollBarClassSelector > -1) {
+			this.scrollbar.addClassSelector(scrollBarClassSelector);
 		}
+		this.scrollbar.setHorizontal(horizontal);
+		this.assistant = new ScrollAssistant();
+
+		super.addChild(this.scrollbar);
+	}
+
+	public Scroll(boolean horizontal, boolean showScrollbar) {
+		super(true);
+		this.horizontal = horizontal;
+		this.scrollbar = new Scrollbar(0, showScrollbar);
 		this.scrollbar.setHorizontal(horizontal);
 		this.assistant = new ScrollAssistant();
 

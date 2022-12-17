@@ -2,8 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
-	<classpathentry kind="src" path="src/test/java"/>
-	<classpathentry kind="src" path="src/test/resources"/>
 	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=HelloWorld&amp;ivyXmlPath=module.ivy&amp;confs=*"/>
+	<classpathentry kind="lib" path="libs/scrolllist.jar"/>
+	<classpathentry kind="lib" path="libs/navigation-drawer.jar"/>
+	<classpathentry kind="lib" path="libs/material.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
