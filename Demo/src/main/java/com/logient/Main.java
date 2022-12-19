@@ -45,44 +45,39 @@ public class Main {
 
 	private static DrawerItem[] createDrawerItems() {
 		MaterialTheme theme = App.getTheme();
-		DrawerItem[] drawerItems = { new DrawerItem(theme, "Label #1", new Label("This is a first label")),
-				new DrawerItem(theme, "Label #2", new Label("This is a second label")),
-				new DrawerItem(theme, "Label #3", new Label("This is a third label")),
-				new DrawerItem(theme, "Label #4", new Label("This is fourth label")),
-				new DrawerItem(theme, "Label #5", new Label("This is a fifth label")),
-				new DrawerItem(theme, "Label #6", new Label("This is a sixth label")),
-				new DrawerItem(theme, "Label #7", new Label("This is a seventh label")),
-				new DrawerItem(theme, "Label #8", new Label("This is a eighth label")),
-				new DrawerItem(theme, "Label #9", new Label("This is a ninth label")),
-				new DrawerItem(theme, "Image", new ImageWidget("/images/microej_background.png")),
-				new DrawerItem(theme, "Typos", createTypoList()) };
-		return drawerItems;
+		return new DrawerItem[] { new DrawerItem(theme, "Label #1", new Label("This is a first label")), //$NON-NLS-1$ //$NON-NLS-2$
+				new DrawerItem(theme, "Label #2", new Label("This is a second label")), //$NON-NLS-1$ //$NON-NLS-2$
+				new DrawerItem(theme, "Label #3", new Label("This is a third label")), //$NON-NLS-1$ //$NON-NLS-2$
+				new DrawerItem(theme, "Label #4", new Label("This is fourth label")), //$NON-NLS-1$ //$NON-NLS-2$
+				new DrawerItem(theme, "Label #5", new Label("This is a fifth label")), //$NON-NLS-1$ //$NON-NLS-2$
+				new DrawerItem(theme, "Label #6", new Label("This is a sixth label")), //$NON-NLS-1$ //$NON-NLS-2$
+				new DrawerItem(theme, "Label #7", new Label("This is a seventh label")), //$NON-NLS-1$ //$NON-NLS-2$
+				new DrawerItem(theme, "Label #8", new Label("This is a eighth label")), //$NON-NLS-1$ //$NON-NLS-2$
+				new DrawerItem(theme, "Label #9", new Label("This is a ninth label")), //$NON-NLS-1$ //$NON-NLS-2$
+				new DrawerItem(theme, "Image", new ImageWidget("/images/microej_background.png")), //$NON-NLS-1$ //$NON-NLS-2$
+				new DrawerItem(theme, "Typos", createTypoList()) }; //$NON-NLS-1$
 	}
 
 	private static Widget createTypoList() {
 
 		ScrollableList list = new ScrollableList(LayoutOrientation.VERTICAL);
-		list.addChild(createLabel("h1", Styles.h1));
-		list.addChild(createLabel("h2", Styles.h2));
-		list.addChild(createLabel("h3", Styles.h3));
-		list.addChild(createLabel("h4", Styles.h4));
-		list.addChild(createLabel("h5", Styles.h5));
-		list.addChild(createLabel("body1", Styles.body1));
-		list.addChild(createLabel("body2", Styles.body2));
-		list.addChild(createLabel("subtitle", Styles.subtitle));
-		list.addChild(createLabel("h1", Styles.h1));
-		list.addChild(createLabel("h1", Styles.h1));
-		list.addChild(createLabel("h1", Styles.h1));
-		list.addChild(createLabel("h1", Styles.h1));
+		list.addChild(createLabel("h1", Styles.h1)); //$NON-NLS-1$
+		list.addChild(createLabel("h2", Styles.h2)); //$NON-NLS-1$
+		list.addChild(createLabel("h3", Styles.h3)); //$NON-NLS-1$
+		list.addChild(createLabel("h4", Styles.h4)); //$NON-NLS-1$
+		list.addChild(createLabel("h5", Styles.h5)); //$NON-NLS-1$
+		list.addChild(createLabel("body1", Styles.body1)); //$NON-NLS-1$
+		list.addChild(createLabel("body2", Styles.body2)); //$NON-NLS-1$
+		list.addChild(createLabel("subtitle", Styles.subtitle)); //$NON-NLS-1$
+		list.addChild(createLabel("h1", Styles.h1)); //$NON-NLS-1$
+		list.addChild(createLabel("h1", Styles.h1)); //$NON-NLS-1$
+		list.addChild(createLabel("h1", Styles.h1)); //$NON-NLS-1$
+		list.addChild(createLabel("h1", Styles.h1)); //$NON-NLS-1$
 
 		Scroll scroll = new Scroll(LayoutOrientation.VERTICAL);
 		scroll.setChild(list);
 		scroll.setEnabled(false);
 		return scroll;
-	}
-
-	private static Label createLabel(String value) {
-		return createLabel(value, Styles.body1);
 	}
 
 	private static Label createLabel(String value, int classSelector) {
