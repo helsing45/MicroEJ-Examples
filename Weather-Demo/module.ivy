@@ -31,7 +31,7 @@
 		<dependency org="ej.library.eclasspath" name="logging" rev="1.1.0"/>
 		
 		<dependency org="ej.api" name="bon" rev="1.4.2" />
-		<dependency org="ej.api" name="ssl" rev="2.2.3" />
+		<dependency org="ej.api" name="ssl" rev="2.2.1" />
 		<dependency org="ej.api" name="net" rev="1.1.4" />
 		<dependency org="ej.api" name="microui" rev="3.0.3"/>
 		
