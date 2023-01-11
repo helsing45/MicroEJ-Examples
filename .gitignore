@@ -4,3 +4,4 @@ src-adpgenerated
 .metadata
 */.settings
 .sonarlint
+Weather-Demo/src/main/resources/weatherdemo.properties.list
